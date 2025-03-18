@@ -1,32 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
     <title>Spotify</title>
-</head>
-<body>
-    <div class="navbar flex home">
-        <img src="logo.svg" alt="">
-            <ul>
-                <li id="homelogo"><img src="home.svg" alt="home">Home</li>
-                <li id="search-logo"><img src="search.svg" alt="home">Search</li>
-            </ul>
+  </head>
+  <body>
+    <div class="navbar flex home" id="navbar1">
+      <ul>
+        <li>
+          <img id="spotify-logo" class="invert" src="logo.svg" alt="Spotify" />
+        </li>
+        <li id="homelogo" class="invert">
+          <img src="home.svg" alt="Home" />Home
+        </li>
+        <!-- <li id="search-logo" class="invert" ><img src="search.svg" alt="Search">Search</li> -->
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            class="searchbar-input"
+            placeholder="What do you want to play?"
+          />
+        </div>
+      </ul>
     </div>
-    <div class="container flex ">
-        <div class="left border">
-            
-            <div class="library">
-
+    <div class="container flex">
+      <div class="left border">
+        <div class="library">
+            <h3>Your Library</h3>
+            <div class="footer">
+                <div>
+                <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+                </div>
+                <div>
+                    <a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety & Privacy Center</a>
+                </div>
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a>
+                </div>
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
+                </div>
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
+                </div>
+                <div>
+                    <a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a>
+                </div>
+                <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener">Cookies</a>
             </div>
-
+            </div>
+          </div>
         </div>
-        <div class="right border">
-            hehe
-        </div>
+        
+      <div class="right border">hehe</div>
     </div>
-    
-</body>
+  </body>
 </html>

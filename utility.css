@@ -10,3 +10,7 @@
 .text-centre{
     align-items: center;
 }
+
+.invert{
+    filter: invert(1);
+}
