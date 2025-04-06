@@ -9,6 +9,9 @@
      background-color: black;
     color: white; 
 } 
+.container{
+    display: flex;
+}
  #navbar1{
     background-color: #000000;
     color: white;
@@ -49,10 +52,16 @@
 
 
 .left{
-    width: 25vw;
+   width: 28vw;
 }
 .right{
-    width: 75vw;
+    width: 72vw;
+    margin-top: 1px;
+    margin-left: 12px;
+    margin-right: 12px;
+    min-height: 87vh;
+    background-color: #121212;
+    border-radius: 10px;
 }
 
 .home ul{
@@ -60,10 +69,11 @@
     display: flex;
     margin: 10px 10px;
     padding: 4px;
+    margin-top: 10px;
 }
 
 #homelogo{
-    height: 49px;
+    height: 34px;
     width: 34px;
     margin: 4px 12px;
     cursor: pointer;
@@ -75,18 +85,63 @@
     cursor: pointer;
 }
 #spotify-logo{
-    height: 40px;
+    height: 34px;
     width: 39px;
     margin: 0px 12px;
     cursor: pointer;
 }
 
+#add-logo {
+    display: flex;
+    height: 25px;
+    width: 20px;
+    cursor: pointer; 
+    background: none;
+    border-radius: 45px; 
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg); /* white */
+}
+
+.library button{
+  cursor: pointer;
+  transition: 0.3s ease;
+  height: 28px;
+  margin-top: 28px;
+  position: relative;
+  right: 15px;
+  background: none;
+  border: none;
+  fill: white;
+  border-radius: 45px;
+}
+button:hover{
+    background-color: #333;
+    transform: scale(1.1);
+    transition-property: color;
+}
+
+.library{
+    display: flex;
+    justify-content: space-between;
+    min-height: 87vh;
+    background-color: #121212;
+    border-radius: 10px;
+    position: relative;
+}
+
 .footer{
     display: flex;
-    font-size: 12px;
+    flex-wrap: wrap;
+    font-size: 11px;
     gap: 14px;
+    max-width: 273%;
+    position: absolute;
+    bottom: 0;
 }
 .footer a{
     color: grey;
+    display: flex;
+    /* margin: 3px 3px; */
+    padding: 4px 4px;
+    text-decoration: none;
 }
 

@@ -3,6 +3,11 @@
     margin: 3px;
 }
 
+.bg{
+    background-color: #212121;
+    color: white;
+}
+
 .flex{
     display: flex;
 }
@@ -13,4 +18,11 @@
 
 .invert{
     filter: invert(1);
+}
+.h1{
+    padding: 30px 20px;
+}
+
+.m1{
+    margin-left: 15px;
 }
