@@ -145,3 +145,30 @@ button:hover{
     text-decoration: none;
 }
 
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardContainer .card{
+    width: 200px;
+    padding: 9px 13px;
+    border: #282828;
+    border-radius: 8px;
+}
+
+.card img{
+    width: 100%;
+    object-fit: contain;
+    padding: 5px 0px;
+    border-radius: 15px;
+}
+
+.card{
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.card:hover{
+    background-color: #282828;
+
+}
+
