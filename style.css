@@ -15,6 +15,7 @@
  #navbar1{
     background-color: #000000;
     color: white;
+    height: 72px;
  }
 
  .search-bar {
@@ -50,6 +51,48 @@
     color: gray;
 }
 
+.signupbtn{
+    color: #282828;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    padding: 17px 38px;
+    margin: 5px 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 250px;
+    transition: all 0.1s ease-in-out;
+}
+
+.signupbtn:hover{
+    font-size: 1.01rem;
+    color: white;
+    transform: scale(1.08);
+
+}
+
+.loginbtn{
+    background-color: white;
+    border-radius: 38px;
+    color: black;
+    padding: 17px 38px;
+    margin: 5px 10px; 
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 136px;
+    font-weight: bold;
+    transition: all -5s ease-in-out;
+}
+
+.loginbtn:hover{
+    /* padding: 17px 40px;
+    margin: 5px 10px;  */
+    font-weight: bold;
+    transform: scale(1.04);
+}
+
 
 .left{
    width: 28vw;
@@ -62,6 +105,9 @@
     min-height: 87vh;
     background-color: #121212;
     border-radius: 10px;
+    max-height: 100vh;
+    overflow: scroll;
+    position: relative;
 }
 
 .home ul{
@@ -77,6 +123,15 @@
     width: 34px;
     margin: 4px 12px;
     cursor: pointer;
+    background-color: #747474;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+}
+
+#homelogo img{
+    height:22px;
 }
 #search-logo{
     height: 22px;
@@ -85,9 +140,9 @@
     cursor: pointer;
 }
 #spotify-logo{
-    height: 34px;
-    width: 39px;
-    margin: 0px 12px;
+    height: 37px;
+    width: 37px;
+    margin: 6px 12px;
     cursor: pointer;
 }
 
@@ -159,16 +214,52 @@ button:hover{
 .card img{
     width: 100%;
     object-fit: contain;
-    padding: 5px 0px;
+    padding: 9px 2px;
     border-radius: 15px;
 }
 
 .card{
     transition: background-color 0.3s ease;
     cursor: pointer;
+    position: relative;
 }
 .card:hover{
     background-color: #282828;
+}
 
+.play{
+    border: 1px;
+    background-color: #1ed760;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    padding: 6px 7px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 176px;
+    right: 20px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.play img{
+    object-fit: contain;
+    padding: 5px 7px;
+}
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    background-color: #1ed760;
+    padding: 4px 5px;
+    width: 100%;
+}
+
+.playbar-btns{
+    display: flex;
+    height: 22px;
+    justify-content: center;
+    gap: 30px;
 }
 
