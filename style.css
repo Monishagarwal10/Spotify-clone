@@ -206,10 +206,24 @@ button:hover{
 
 .songList ul{
     padding: 0 14px;
+    list-style: decimal;
 }
 
-.songList li ul{
+.songList ul li{
     list-style-type: decimal;
+    display: flex;
+    gap: 12px;
+    padding: 14px 0;
+
+}
+
+#musiclogo{
+    height: 25px;
+    width: 20px;
+}
+
+.songInfo{
+    /* padding: 4px 0; */
 }
 
 .footer{
