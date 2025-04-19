@@ -10,7 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
 
-    <title>Spotify</title>
+    <title>Spotify - Web Player: Music for everyone </title>
   </head>
   <body>
     <div class="navbar flex home" id="navbar1">
@@ -46,14 +46,17 @@
             </div>
             <div class="songList">
               <ul>
-                <li><img id="musiclogo" class="invert" src="musical-note.png " alt="">
+                <!-- <li><img class="buttonlogos , invert" src="musical-note.png " alt="">
                   <div class="songInfo">
                     <div>Millionaire</div>
                     <div> Honey Singh</div>
                   </div>
-                </li>
-                <li>Tainu Khabar Nahi</li>
-                
+                  <div id="playnow">
+                    <span>Play Now</span>
+                    <div> <img class="buttonlogos , invert , playHover"  src="playnow.png" alt=""></div>
+                  </div>
+                </li> -->
+
               </ul>
             </div>
             <div class="footer ">
@@ -102,13 +105,37 @@
                 </div>
               </div>
               <div class="playbar">
-                <div class="songinfo"></div>
-                <div class="playbar-btns">
-                  <img src="previous.png" alt="">
-                  <img src="playbar.png" alt="">
-                  <img src="next-button.png" alt="">
+                <div class="seekbar">
+                  <div class="circle">
+
+                  </div>
                 </div>
-                <div class="songtime"></div>
+                <div class="songinfo"></div>
+                <div class="playbar-container">
+
+                  <div class="playbar-btns">
+                    <img src="shuffle.png" alt="">
+                    <div class="overlay-text">Shuffle</div>
+                  </div>
+                  <div class="playbar-btns">
+                    <img src="previous.png" alt="">
+                    <div class="overlay-text">Previous</div>
+                  </div>
+                  <div class="playbar-btns">
+                    <img src="playbar.png" alt="">
+                    <div class="overlay-text btn-hover">Play</div>
+                  </div>
+                  <div class="playbar-btns">
+                    <img src="next-button.png" alt="">
+                    <div class="overlay-text btn-hover">Next</div>
+                  </div>
+                  <div class="playbar-btns">
+                    <img src="repeat.png" alt="">
+                    <div class="overlay-text btn-hover">Repeat</div>
+                  </div>
+                 
+                  <div class="songtime"></div>
+                </div>
               </div>
             </div>
         </div>

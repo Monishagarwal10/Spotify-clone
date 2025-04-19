@@ -1,7 +1,7 @@
 console.log("Javascript starts!");
 
 async function getSongs() {
-    let a= await fetch("http://127.0.0.1:5500/songs/")
+    let a= await fetch("http://127.0.0.1:5500/songs/")//To fetch all  the songs from the folder
     let response = await a.text();
     console.log(response);
     let div = document.createElement("div")
@@ -22,17 +22,25 @@ async function main() {
     console.log(songs);//get the list of all songs
 
     let songUl = document.querySelector(".songList").getElementsByTagName("ul")[0]
-    for (const song of 'songs') {
-        songUl.innerHTML = songUl.innerHTML + '<li> ${song} </li>';
+    for (const song of songs) {
+        songUl.innerHTML = songUl.innerHTML + `<li> 
+        
+        <img class="buttonlogos  invert  "  src="musical-note.png " alt="">
+                  <div class="songInfo">
+                    <div> ${song.replaceAll("%20"," ")}</div>
+                    <div>Arijit Singh</div>
+                  </div>
+                  <div id="playnow">
+                    <span>Play Now</span>
+                    <div> <img class="buttonlogos  invert  playHover"   src="playnow.png" alt=""></div>
+                  </div>
+        </li>`;
         
     }
     
-    var audio = new Audio(songs[0]);
-    // audio.play();// plays the first song
+    
 
-    audio.addEventListener("loadeddata",()=>{
-        console.log(audio.duration,audio.currentSrc,audio.currentTime)// it will help to show the duration of songs in sec
-    })
+    
 }
 
 main()

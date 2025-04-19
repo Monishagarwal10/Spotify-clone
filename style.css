@@ -202,7 +202,13 @@ button:hover{
 .songList{
     width: 100%;
     list-style: none;
+    height: 430px;
+    overflow: scroll;
 } 
+
+.songInfo{
+    width: 65%;
+}
 
 .songList ul{
     padding: 0 14px;
@@ -210,20 +216,38 @@ button:hover{
 }
 
 .songList ul li{
+    width: 93%;
+    border: 2px solid white;
+    border-radius: 3px;
+    margin-bottom: 22px;
+    margin-right: 4px;
     list-style-type: decimal;
     display: flex;
     gap: 12px;
-    padding: 14px 0;
-
+    padding: 13px 11px;
+    justify-content: space-between;
 }
 
-#musiclogo{
-    height: 25px;
-    width: 20px;
+#playnow{
+    display:flex;
+    width: 68%;
+    justify-content: center;
+    align-items: center;
 }
 
-.songInfo{
-    /* padding: 4px 0; */
+#playnow span{
+    width: 100%;
+    margin: -16px 12px;
+    padding: 15px;
+}
+
+.playHover:hover{
+    cursor: pointer;
+}
+
+.buttonlogos{
+    height: 26px;
+    width: 26px;
 }
 
 .footer{
@@ -292,18 +316,70 @@ button:hover{
 }
 
 .playbar{
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: 34px;
+    height: 36px;
     background-color: #1ed760;
     padding: 4px 5px;
-    width: 100%;
+    width: 68vw;
 }
 
-.playbar-btns{
+.playbar-container{
     display: flex;
     height: 22px;
     justify-content: center;
     gap: 30px;
-    cursor: pointer;
 }
+
+.playbar-btns {
+    display: flex;
+    height: 22px;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.playbar-btns:hover .overlay-text{
+    opacity: 1;
+}
+
+
+.overlay-text {
+    position: absolute;
+    top: -77%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #282828;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+.seekbar{
+    height: 4px;
+    width: 98%;
+    background-color: white;
+    border-radius: 8px;
+    position: absolute;
+    bottom: -3px;
+    margin: 3px;
+}
+
+.circle{
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background-color: white;
+    position: relative;
+    bottom: 5px;
+    left: 0%;
+    transition: left 0.5s;
+}
+
+
 
