@@ -1,4 +1,5 @@
 console.log("Javascript starts!");
+let currentSong = new Audio();
 
 async function getSongs() {
     let a= await fetch("http://127.0.0.1:5500/songs/")//To fetch all  the songs from the folder
@@ -15,6 +16,14 @@ async function getSongs() {
         }
     }
     return songs; 
+}
+
+const  playMusic = (track)=>{
+    // let audio = new Audio("/songs/" + track)
+    currentSong.src = "/songs/" + track
+    currentSong.play();
+    play.src = "pause.png"
+
 }
 
 async function main() {
@@ -38,7 +47,33 @@ async function main() {
         
     }
     
-    
+    //Attach an event listener to every song
+    Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e=>{
+    e.addEventListener("click",elements=>{
+        console.log(e.querySelector(".songInfo").firstElementChild.innerHTML)
+        playMusic(e.querySelector(".songInfo").firstElementChild.innerHTML.trim())
+        // if(currentSong.paused){
+        //     currentSong.play()
+        //     play.src = "pause-button.png"
+        // }
+        // else{
+        //     currentSong.pause()
+        //     play.src = "play.png"
+        // }
+    })
+    })
+
+    // Attach an event listener to play the previous and next song
+    play.addEventListener("click",()=>{
+        if(currentSong.paused){
+            currentSong.play()
+            play.src = "pause.png"
+        }
+        else{
+            currentSong.pause()
+            play.src = "playbar.png"
+        }
+    })
 
     
 }
