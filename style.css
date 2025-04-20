@@ -106,7 +106,7 @@
     background-color: #121212;
     border-radius: 10px;
     max-height: 100vh;
-    overflow: scroll;
+    overflow: auto;
     position: relative;
 }
 
@@ -144,6 +144,10 @@
     width: 37px;
     margin: 6px 12px;
     cursor: pointer;
+}
+
+.close{
+    display: none;
 }
 
 #add-logo {
@@ -267,6 +271,10 @@ button:hover{
     text-decoration: none;
 }
 
+.hamburger{
+    display: none;
+}
+
 .cardContainer{
     display: flex;
     flex-wrap: wrap;
@@ -384,10 +392,6 @@ button:hover{
     transition: opacity 0.3s ease;
   }
 
-.seekbarContainer{
-    
-}
-
 .seekbar{
     height: 6px;
     width: 65%;
@@ -428,5 +432,41 @@ button:hover{
     font-size: 12px;
 }
 
+@media (max-width:1400px){
+    .left{
+        position: absolute;
+        left: -120%;
+        transition: all .3s;
+        z-index: 1;
+        width: 365px;
+    }
 
+
+    #add-logo{
+        left: -23px;
+    }
+
+    .close{
+        position: relative;
+        display: block;
+        height: 30px;
+        width: 26px;
+        top: -12px;
+    }
+
+    .right{
+        width: 100vw;
+    }
+
+    .playbar{
+        width: 82vw;
+        top: 59%;
+    }
+
+    .hamburger{
+        display: block;
+        height: 34px;
+        width: 34px;
+    }
+}
 

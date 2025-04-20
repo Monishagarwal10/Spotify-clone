@@ -98,6 +98,16 @@ async function main() {
          document.querySelector(".seekbar").style.background = `linear-gradient(to right, #1ed760 ${percent}%, #ccc ${percent}%)`;
 
     })
+
+    //To add the hamburger in mobile
+    document.querySelector(".hamburger").addEventListener("click" , ()=>{
+        document.querySelector(".left").style.left = "0"
+    })
+
+    //To close the hamburger 
+    document.querySelector(".close").addEventListener("click" , ()=>{
+        document.querySelector(".left").style.left = "-120%"
+    })
     
 }
 
