@@ -68,7 +68,7 @@ async function main() {
     })
 
     // Attach an event listener to play the previous and next song
-    play.addEventListener("click",()=>{
+    play.addEventListener("click",playPause=()=>{
         if(currentSong.paused){
             currentSong.play()
             play.src = "pause.svg"
