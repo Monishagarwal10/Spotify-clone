@@ -1,67 +1,154 @@
 @media (max-width:1400px){
-    .left{
-        position: absolute;
-        left: -120%;
-        transition: all .3s;
-        z-index: 1;
-        width: 365px;
-    }
+  .left{
+      position: absolute;
+      left: -120%;
+      transition: all .3s;
+      z-index: 1;
+      width: 365px;
+      background-color: #121212;
+  }
 
+  #add-logo{
+      left: -23px;
+  }
 
-    #add-logo{
-        left: -23px;
-    }
+  .close{
+      position: relative;
+      display: block;
+      height: 30px;
+      width: 26px;
+      top: -12px;
+  }
 
-    .close{
-        position: relative;
-        display: block;
-        height: 30px;
-        width: 26px;
-        top: -12px;
-    }
+  .right{
+      width: 100vw;
+  }
 
-    .right{
-        width: 100vw;
-    }
+  .playbar{
+      width: 82vw;
+      top: 59%;
+  }
 
-    .playbar{
-        width: 82vw;
-        top: 59%;
-    }
+  .hamburger{
+      display: block;
+      height: 34px;
+      width: 34px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+      cursor: pointer;
+  }
 
-    .hamburger{
-        display: block;
-        height: 34px;
-        width: 34px;
-    }
+  .songName{
+      position: relative;
+      left: -12px;
+      bottom: 45px;
+  }
 
-    .songName{
-    position: relative;
-    left: -12px;
-    bottom: 45px;
-    }
+  .search-bar {
+      display: none; /* hide search bar */
+  }
 
-    /* by gpt */
-    .search-bar {
-        display: none; /* hide search bar */
-      }
-    
-      .search-icon {
-        display: inline-block; /* show search icon */
-        font-size: 20px;
-        cursor: pointer;
-      }
-    
-      .right {
-        flex-direction: row;
-        justify-content: flex-end;
-        width: 100%;
-        gap: 10px;
-      }
-    
-      .signupbtn,
-      .loginbtn {
-        padding: 6px 10px;
-        font-size: 13px;
-      }
+  .navbar {
+      position: relative;
+  }
+  
+  /* Fix for login and signup buttons to be side by side */
+  .signupbtn,
+  .loginbtn {
+      position: absolute;
+      top: 20px;
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin: 0; /* Reset margins */
+      transition: all 0.3s ease;
+  }
+
+  .signupbtn {
+      right: 120px; /* Position to the left of login button */
+      background-color: transparent;
+      color: white;
+  }
+
+  .loginbtn {
+      right: 20px; /* Position on right side */
+      background-color: white;
+      color: black;
+  }
+
+  .cardContainer {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .card {
+      width: 40%; /* Make cards slightly smaller and wrap */
+      margin: 10px;
+  }
+
+  .playbar {
+      position: fixed;
+      bottom: 0;
+      top: 90%;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+  }
+
+  .playbar-container {
+      gap: 15px; /* Tighter button spacing */
+  }
+
+  .seekbar {
+      width: 90%; /* More responsive seekbar */
+      margin: 11px 5%;
+  }
+}
+
+/* Additional responsive tweaks for smaller screens */
+@media (max-width:768px) {
+  .left {
+      width: 80%; /* Wider panel on very small screens */
+  }
+
+  .right {
+      padding: 0 10px; /* Some padding on smaller screens */
+  }
+
+  .card {
+      width: 80%; /* Full-width cards on very small screens */
+  }
+
+  .playbar-btns {
+      gap: 10px; /* Even tighter button spacing */
+  }
+
+  /* Smaller buttons on very small screens */
+  .signupbtn,
+  .loginbtn {
+      font-size: 12px;
+      padding: 6px 12px;
+  }
+  
+  .signupbtn {
+      right: 100px; /* Adjusted position */
+  }
+}
+
+/* Extra small screens */
+@media (max-width:480px) {
+  .signupbtn {
+      right: 90px; /* Closer on very small screens */
+  }
+  
+  .signupbtn,
+  .loginbtn {
+      font-size: 11px;
+      padding: 5px 10px;
+  }
 }

@@ -1,5 +1,6 @@
 console.log("Javascript starts!");
 let currentSong = new Audio();
+let songs;
 
 async function getSongs() {
     let a= await fetch("http://127.0.0.1:5500/songs/")//To fetch all  the songs from the folder
@@ -8,7 +9,7 @@ async function getSongs() {
     let div = document.createElement("div")
     div.innerHTML = response;
     let as = div.getElementsByTagName("a")
-    let songs = []
+    songs = []
     for( let index = 0;index < as.length;index++){
         const element = as[index];
         if(element.href.endsWith(".mp3")){
@@ -107,6 +108,23 @@ async function main() {
     //To close the hamburger 
     document.querySelector(".close").addEventListener("click" , ()=>{
         document.querySelector(".left").style.left = "-120%"
+    })
+    // To add functionality to the prev btn
+    previous.addEventListener("click",()=>{
+        
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1) [0])
+        if(index-1 >= 0){
+            playMusic(songs[index-1])
+        }
+    })
+
+    // To add functionality to the next btn
+    next.addEventListener("click",()=>{
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1) [0])
+        if(index+1 < songs.length){
+            playMusic(songs[index+1])
+        }
+       
     })
     
 }
